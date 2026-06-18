@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { useNoteStore } from "../../store/notesStore"
 
 export default function AddNoteForm() {
