@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNoteStore } from "../../store/notesStore"
+import { Pencil } from "lucide";
 
 export default function NoteCard({ note }) {
     const deleteNote = useNoteStore((state) => state.deleteNote)
@@ -14,7 +15,7 @@ export default function NoteCard({ note }) {
             </h2>
             <div className="flex gap-3">
               <button className="text-blue-500 hover:text-blue-700 transation">
-                <Pencil />
+                <Pencil/>
               </button>
             
             <button

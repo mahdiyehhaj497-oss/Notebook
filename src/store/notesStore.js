@@ -1,3 +1,4 @@
+import { Search } from "lucide";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
@@ -5,6 +6,12 @@ export const useNoteStore = create(
     persist(
         (set) => ({
             note: [],
+            searchQuery: "",
+            setSearchQuery: (value) =>
+                set(() => ({
+                    searchQuery :value
+                })),
+
             addNote: (title, text) =>
                 set((state) => ({
                     notes: [
