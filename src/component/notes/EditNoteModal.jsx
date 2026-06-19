@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { useNoteStore } from "../../store/notesStore"
+import { useNotesStore } from "../../store/notesStore"
 import Modal from "../ui/Modal"
 
 export default function EditNoteModal({note ,isOpen,onClose}) {
-    const updateNote = useNoteStore((state) => state.updateNote)
+    const updateNote = useNotesStore((state) => state.updateNote)
     const [title, setTitle] = useState(note.title)
     const [text, setText] = useState(note.text)
     const handleUpdate = (e) => {

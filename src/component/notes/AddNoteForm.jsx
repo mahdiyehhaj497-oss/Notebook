@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { useNoteStore } from "../../store/notesStore"
+import { useNotesStore } from "../../store/notesStore"
 
 export default function AddNoteForm() {
 
-    const addNote = useNoteStore((state) => state.addNote)
+    const addNote = useNotesStore((state) => state.addNote)
     
     const [title, setTitle] = useState("")
     const[text,setText]=useState("")

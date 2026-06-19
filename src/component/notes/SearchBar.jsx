@@ -1,8 +1,8 @@
-import { useNoteStore } from "../../store/notesStore"
+import { useNotesStore } from "../../store/notesStore"
 
 export default function SearchBar() {
-    const searchQuery = useNoteStore((state) => state.searchQuery);
-    const setSearchQuery=useNoteStore((state)=> state.setSearchQuery)
+    const searchQuery = useNotesStore((state) => state.searchQuery);
+    const setSearchQuery=useNotesStore((state)=> state.setSearchQuery)
     
     return (
         <>
